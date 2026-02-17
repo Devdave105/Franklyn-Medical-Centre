@@ -486,13 +486,13 @@ address {
   z-index: 2;
 }
 .slide-1 {
-  background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=85');
+  background-image: url('images/bk5.png');
 }
 .slide-2 {
-  background-image: url('https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=1600&q=85');
+  background-image: url('images/bk6.png');
 }
 .slide-3 {
-  background-image: url('https://images.unsplash.com/photo-1550831107-1553da8c8464?w=1600&q=85');
+  background-image: url('images/outside.png');
 }
 .slide-overlay {
   position: absolute;
