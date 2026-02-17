@@ -1,3 +1,4 @@
+
 /* ============================================================
    FRANKLYN MEDICAL CENTRE — Premium Website Stylesheet
    Author: Senior Frontend Developer
@@ -459,15 +460,16 @@ address {
 /* ── HERO ───────────────────────────────────────────────── */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 900px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .hero-slider {
-  width: 100%;
-  height: 100%;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 620px;
+  max-height: 900px;
+  overflow: hidden;
 }
 .slide {
   position: absolute;
@@ -509,7 +511,7 @@ address {
   width: 92%;
   margin: 0 auto;
   color: var(--white);
-  padding-bottom: 80px;
+  padding: 0 0 60px;
 }
 .slide-eyebrow {
   display: inline-block;
@@ -556,17 +558,38 @@ address {
   flex-wrap: wrap;
   opacity: 0;
   animation: slideUp 0.7s 0.65s ease forwards;
+  position: relative;
+  z-index: 10;
 }
 .slide:not(.active) .slide-cta-group { animation: none; opacity: 0; }
+.slide-cta-group .btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--purple-deep);
+  font-weight: 600;
+}
+.slide-cta-group .btn-primary:hover {
+  background: #b8922e;
+  border-color: #b8922e;
+  color: var(--white);
+}
+.slide-cta-group .btn-ghost {
+  border-color: rgba(255,255,255,0.75);
+  color: var(--white);
+  font-weight: 500;
+}
+.slide-cta-group .btn-ghost:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: var(--white);
+}
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .hero-controls {
   position: absolute;
-  bottom: 90px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 28px;
+  right: 5%;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -608,18 +631,15 @@ address {
   border-radius: 4px;
 }
 .hero-stats {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
   z-index: 10;
-  padding: 0;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 .stat-item {
   padding: 22px 40px;
@@ -1623,8 +1643,8 @@ address {
   .stat-item { width: 50%; padding: 16px; }
   .stat-divider:nth-child(4) { display: none; }
   .hero { max-height: 750px; }
-  .slide-content { padding-bottom: 160px; }
-  .hero-controls { bottom: 160px; }
+  .slide-content { padding-bottom: 180px; padding-top: 20px; }
+  .hero-controls { bottom: 175px; right: 4%; }
 }
 
 @media (max-width: 500px) {
